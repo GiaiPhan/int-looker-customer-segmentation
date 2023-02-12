@@ -93,6 +93,11 @@ view: predict_result_2 {
     sql: ${TABLE}.Sex ;;
   }
 
+  measure: count_sex {
+    type: number
+    sql: COUNT(${sex}) ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []
