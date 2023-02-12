@@ -26,6 +26,11 @@ view: predict_result_2 {
     sql: ${TABLE}.Checking_account ;;
   }
 
+  measure: count_checking_account {
+    type: number
+    sql: COUNT(${checking_account}) ;;
+  }
+
   dimension: credit_amount {
     type: number
     sql: ${TABLE}.Credit_amount ;;
@@ -48,6 +53,11 @@ view: predict_result_2 {
   dimension: duration {
     type: number
     sql: ${TABLE}.Duration ;;
+  }
+
+  measure: count_duration {
+    type: number
+    sql: COUNT(${duration}) ;;
   }
 
   dimension: housing {
