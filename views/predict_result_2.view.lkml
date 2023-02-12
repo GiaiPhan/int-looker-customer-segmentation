@@ -88,6 +88,11 @@ view: predict_result_2 {
     sql: ${TABLE}.Saving_accounts ;;
   }
 
+  measure: count_saving_accounts {
+    type: number
+    sql: COUNT(${saving_accounts}) ;;
+  }
+
   dimension: sex {
     type: string
     sql: ${TABLE}.Sex ;;
