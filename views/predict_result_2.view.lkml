@@ -78,6 +78,11 @@ view: predict_result_2 {
     sql: ${TABLE}.Purpose ;;
   }
 
+  measure: count_purpose {
+    type: number
+    sql: COUNT(${purpose}) ;;
+  }
+
   dimension: saving_accounts {
     type: string
     sql: ${TABLE}.Saving_accounts ;;
